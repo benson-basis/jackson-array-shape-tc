@@ -35,7 +35,7 @@ public class Outer {
         attributes = new HashMap<String, TheItem>();
     }
 
-    @JsonTypeInfo(use = JsonTypeInfo.Id.CUSTOM, include = JsonTypeInfo.As.PROPERTY, property = "type")
+    @JsonTypeInfo(use = JsonTypeInfo.Id.CUSTOM, include = JsonTypeInfo.As.WRAPPER_ARRAY)
     @JsonTypeIdResolver(DmTypeIdResolver.class)
     public Map<String, TheItem> getAttributes() {
         return attributes;
